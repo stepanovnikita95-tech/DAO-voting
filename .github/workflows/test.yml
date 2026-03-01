@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm run test
+      - run: npx hardhat test
       - run: npx hardhat coverage
       - uses: codecov/codecov-action@v4
         with:

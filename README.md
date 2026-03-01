@@ -4,7 +4,7 @@
 [![Hardhat](https://img.shields.io/badge/Built%20with-Hardhat-orange)](https://hardhat.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests & Coverage](https://github.com/stepanovnikita95-tech/DAO-voting/actions/workflows/test.yml/badge.svg)](https://github.com/stepanovnikita95-tech/DAO-voting/actions/workflows/test.yml)
-[![Coverage](https://codecov.io/gh/stepanovnikita95-tech/Solidity-Insurance-Pool/branch/main/graph/badge.svg)](https://codecov.io/gh/stepanovnikita95-tech/Solidity-Insurance-Pool)
+[![Coverage](https://codecov.io/gh/stepanovnikita95-tech/Solidity-Insurance-Pool/branch/main/graph/badge.svg)](https://codecov.io/gh/stepanovnikita95-tech/DAO-voting)
 
 
 **Fully tested DAO governance system** built with OpenZeppelin Governor + Timelock + ERC20Votes.
