@@ -2,6 +2,7 @@
 
 [![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.30-black?logo=solidity)](https://docs.soliditylang.org/)
 [![Hardhat](https://img.shields.io/badge/Built%20with-Hardhat-orange)](https://hardhat.org/)
+[![Foundry](https://img.shields.io/badge/Foundry%20tests-%E2%9C%94%EF%B8%8F-brightgreen)](https://book.getfoundry.sh/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests & Coverage](https://github.com/stepanovnikita95-tech/DAO-voting/actions/workflows/test.yml/badge.svg)](https://github.com/stepanovnikita95-tech/DAO-voting/actions/workflows/test.yml)
 [![Coverage](https://codecov.io/gh/stepanovnikita95-tech/DAO-voting/branch/main/graph/badge.svg)](https://codecov.io/gh/stepanovnikita95-tech/DAO-voting)
@@ -19,7 +20,7 @@ This project implements a complete decentralized autonomous organization (DAO) w
 - Full proposal lifecycle: **propose → vote → queue → execute**
 - Access control: only Governor can queue/execute
 - Protection checks: flash-loan resistance, reentrancy, double-voting
-- **90%+ test coverage** — unit, integration & end-to-end tests
+- **90%+ test coverage** — unit, integration, fuzzing, invariants & end-to-end tests
 - CI/CD with GitHub Actions + Codecov badge
 
 ## Tech Stack
@@ -29,6 +30,7 @@ This project implements a complete decentralized autonomous organization (DAO) w
 - Hardhat + TypeChain + Chai
 - Solidity Coverage
 - GitHub Actions + Codecov
+- Foundry Tests (fuzzing, invariants)
 
 ## Deployment
 
@@ -59,6 +61,7 @@ https://repo.sourcify.dev/contracts/full_match/11155111/0x9cc04CEe3724A232Cd8eE8
 - Access control (only Governor can queue/execute)
 - Flash-loan protection
 - Reentrancy & double-voting protection
+- Fuzzing, invariants
 
 ## Security Considerations
 
@@ -72,6 +75,11 @@ https://repo.sourcify.dev/contracts/full_match/11155111/0x9cc04CEe3724A232Cd8eE8
 ## Installation & Local Setup
 
 ```bash
+# Hardhat
 git clone https://github.com/stepanovnikita95-tech/DAO-voting.git
 cd DAO-voting
-npm install# DAO-voting
+npm install
+npx hardhat test
+
+# Foundry (in root foundry-dao-voting)
+forge test -vvv
