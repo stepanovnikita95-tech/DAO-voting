@@ -1,0 +1,10 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+remappings = [
+  "openzeppelin-contracts/=lib/openzeppelin-contracts/"
+]
+ignored_error_codes = [2424, 5667, 6848, 3860, 5574 ]
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
