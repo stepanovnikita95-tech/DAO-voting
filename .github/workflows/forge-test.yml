@@ -1,0 +1,24 @@
+name: Foundry Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+
+      - name: Install dependencies
+        working-directory: ./foundry-dao-voting  
+        run: forge install
+
+      - name: Run Forge tests
+        working-directory: ./foundry-dao-voting   
+        run: forge test -vvv
